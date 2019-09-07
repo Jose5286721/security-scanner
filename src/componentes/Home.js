@@ -90,7 +90,7 @@ class Home extends React.Component{
                 });
             }
         };
-        var url ='http://localhost/control_webservices/iniciar_session.php?';
+        var url ='http://www.rga-system.com/control_webservices/iniciar_session.php?';
         traerDatosDelUsuario.open('GET',url.concat('correo=',this.state.nombre,'&password=',this.state.password),true);
         traerDatosDelUsuario.send();
  

@@ -60,7 +60,7 @@ class Usuarios extends React.Component{
 					});
 				}
 			}
-			inicializar.open("GET",`http://localhost/control_webservices/consultaUsuarios.php?id=${e.target.value}`,false);
+			inicializar.open("GET",`http://www.rga-system.com/control_webservices/consultaUsuarios.php?id=${e.target.value}`,false);
 			inicializar.send();
 		}catch(error){
 			console.log("No posee conexion a internet");
@@ -78,7 +78,7 @@ class Usuarios extends React.Component{
 					
 				}
 			}
-			modificar.open("GET","http://localhost/control_webservices/modificarUsuario.php?"+'id='+this.state.IdModificar+'&nombre='+this.state.NombreModificar+'&apellido='+this.state.ApellidoModificar+'&direccion='+this.state.DireccionModificar+'&cedula='+this.state.CedulaModificar+'&curso='+this.state.CursoModificar+'&turno='+this.state.TurnoModificar,false);
+			modificar.open("GET","http://www.rga-system.com/control_webservices/modificarUsuario.php?"+'id='+this.state.IdModificar+'&nombre='+this.state.NombreModificar+'&apellido='+this.state.ApellidoModificar+'&direccion='+this.state.DireccionModificar+'&cedula='+this.state.CedulaModificar+'&curso='+this.state.CursoModificar+'&turno='+this.state.TurnoModificar,false);
 			modificar.send();
 		}catch(error){
 			alert("No tiene conexion a internet");
@@ -130,7 +130,7 @@ class Usuarios extends React.Component{
 				alert(rs);
 			}
 		}
-		xmlHttpRequest.open('GET','http://localhost/control_webservices/registrarUsuario.php?'+'id='+this.state.Id+'&nombre='+this.state.Nombre+'&apellido='+this.state.Apellido+'&direccion='+this.state.Direccion+'&cedula='+this.state.Cedula+'&curso='+this.state.Curso+'&turno='+this.state.Turno,false);
+		xmlHttpRequest.open('GET','http://www.rga-system.com/control_webservices/registrarUsuario.php?'+'id='+this.state.Id+'&nombre='+this.state.Nombre+'&apellido='+this.state.Apellido+'&direccion='+this.state.Direccion+'&cedula='+this.state.Cedula+'&curso='+this.state.Curso+'&turno='+this.state.Turno,false);
 		xmlHttpRequest.send();
 	}else{
 			e.preventDefault();
@@ -172,7 +172,7 @@ class Usuarios extends React.Component{
 					
 				}
 			}
-			respuesta.open("GET",`http://localhost/control_webservices/eliminarUsuario.php?id=${e.target.value}`,false);
+			respuesta.open("GET",`http://www.rga-system.com/control_webservices/eliminarUsuario.php?id=${e.target.value}`,false);
 			respuesta.send();
 		}catch(error){
 			alert("No esta conectado a internet");
@@ -196,7 +196,7 @@ class Usuarios extends React.Component{
 				}
 			}
 		}
-		consulta.open("GET","http://localhost/control_webservices/consultaUsuarios.php",false);
+		consulta.open("GET","http://www.rga-system.com/control_webservices/consultaUsuarios.php",false);
 		consulta.send();
 	}catch(error){
 		alert("Conectese a internet");

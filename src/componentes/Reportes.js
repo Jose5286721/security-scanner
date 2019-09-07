@@ -13,7 +13,7 @@ var Reportes = createReactClass({
     };
     },
     HandExportarPDF: function(){
-        var url = 'http://localhost/control_webservices/informes/generarInformeEnPDF.php';
+        var url = 'http://www.rga-system.com/control_webservices/informes/generarInformeEnPDF.php';
         window.location.assign(url.concat('?fechaInicio=',this.state.fechaInicio+" "+this.state.horaInicio,'&fechaFinal=',this.state.fechaFin+" "+this.state.horaFin));
     },
     HandleHoraInicio: function(e){
@@ -49,12 +49,12 @@ var Reportes = createReactClass({
                 }
             }
         }
-        var url = 'http://localhost/control_webservices/informes/generarInforme.php';
+        var url = 'http://www.rga-system.com/control_webservices/informes/generarInforme.php';
         ajax.open('GET',url.concat('?fechaInicio=',this.state.fechaInicio+" "+this.state.horaInicio,'&fechaFinal=',this.state.fechaFin+" "+this.state.horaFin),true);
         ajax.send();}
     },
     HandleExportarEXCEL:function(){
-      var url = 'http://localhost/control_webservices/informes/generarInformeEnExcel.php';
+      var url = 'http://www.rga-system.com/control_webservices/informes/generarInformeEnExcel.php';
         window.open(url.concat('?fechaInicio=',this.state.fechaInicio+" "+this.state.horaInicio,'&fechaFinal=',this.state.fechaFin+" "+this.state.horaFin));
     },
     HandleFechaInicio: function(e){
